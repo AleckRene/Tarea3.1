@@ -51,7 +51,7 @@ class MovieServiceTest {
     }
 
     @Test
-    public void searches_movies_by_title(@Autowired MovieService service) {
+    void searches_movies_by_title(@Autowired MovieService service) {
         String title = "Matrix Re";
         assertThat(service.searchMoviesByTitle(title))
                 .hasSize(2)
@@ -59,7 +59,7 @@ class MovieServiceTest {
     }
 
     @Test
-    public void fetches_movie_details(@Autowired MovieService service) {
+    void fetches_movie_details(@Autowired MovieService service) {
         MovieDetailsDto details = service.fetchDetailsByTitle("The Matrix");
 
         assertThat(details.title()).isEqualTo("The Matrix");
@@ -67,7 +67,7 @@ class MovieServiceTest {
     }
 
     @Test
-    public void fetches_d3_graph(@Autowired MovieService service) {
+    void fetches_d3_graph(@Autowired MovieService service) {
         Map<String, List<Object>> d3Graph = service.fetchMovieGraph();
 
         assertThat(d3Graph).isEqualTo(
