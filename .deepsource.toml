@@ -1,0 +1,30 @@
+version = 1
+
+[[analyzers]]
+name = "javascript"
+
+  [analyzers.meta]
+  plugins = [
+    "angularjs",
+    "angular"
+  ]
+  environment = [
+    "nodejs",
+    "jquery",
+    "mongo"
+  ]
+
+[[analyzers]]
+name = "java"
+
+  [analyzers.meta]
+  runtime_version = "11"
+
+[[transformers]]
+name = "google-java-format"
+
+[[transformers]]
+name = "prettier"
+
+[[transformers]]
+name = "standardjs"
